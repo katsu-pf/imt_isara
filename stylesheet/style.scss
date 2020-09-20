@@ -1,0 +1,459 @@
+@charset 'UTF-8';
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    text-decoration: none;	
+}
+li{
+    list-style: none;
+    display: block;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+h1{
+    font-size: 1.7rem;
+}
+//--------------------------wrapperの設定----------------------------
+@mixin wrapper($width-size){
+    margin: 0 auto;
+    padding: 40px 0;
+    max-width: $width-size;
+    text-align: center;
+}
+.wrapper-1170{//横幅1170pxのwrapper
+    @include wrapper(1170px);
+}
+.wrapper-860{//横幅860pxのwrapper
+    @include wrapper(860px);
+}
+//-----------------------------変数の指定-------------------------------
+$orange-isara:#ebb94d;
+$red-isara:#da6b64;
+$blue-isara:#016ea9;
+$gray-isara:#ececec;
+$lightpink-isara:#fef5e0;
+//--------------------------ボタン・背景画像拡大のクラス-------------------------------
+.button{
+    background-color: $red-isara;
+    border-radius: 50px;
+    color: whitesmoke;
+    display: block;
+    &:hover{
+        background-color: darken($color: $red-isara, $amount: 10%);
+    }
+}
+.big-bg{
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+//-----------------------------枠線の左上右下の角だけ表示させるクラス-----------
+@mixin corner($corner-color){
+        padding: 35px 0;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        .c-l,.c-r{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+        }
+        .c-l{
+            top: 0;
+            left: 0;
+            border-top: 6px solid $corner-color;
+            border-left: 6px solid $corner-color;
+        }
+        .c-r{
+            bottom: 0;
+            right: 0;
+            border-bottom: 6px solid $corner-color;
+            border-right: 6px solid $corner-color;
+        }
+}
+.corner-orange{
+    @include corner($orange-isara);
+}
+.corner-white{
+    @include corner(white);
+}
+/*-------使い方の例--------
+
+    <h1 class="corner-orange">
+        エンジニアとして本当の自由を手に入れるためには？
+        <div class="c-l"></div>
+        <div class="c-r"></div>
+    </h1>
+*/
+//-----------------------------丸型のタイトル---------------------------
+
+.circle-title{
+    background-color: $orange-isara;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    
+    .lotate-center{
+        position: relative;
+        height: 100px;
+        p{
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    }
+}
+/*-------------使用例-------------------
+    <div class="circle-title">
+        <div class="lotate-center">
+            <p>ABOUT</p>
+        </div>
+    </div>
+*/
+
+//-----------------------------白背景のcontent-box----------------------------
+.content-box{
+    background-color: white;
+    border: solid 2px $orange-isara;
+    border-radius: 7px;
+}
+//-----------------------------SNS関連のクラス--------------------------------
+.button-wrapper{
+    li{
+        display: inline-block;
+        margin-left: 6px;
+        padding:0 9px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        a{
+            color: white;
+            font-size: 0.67rem;
+        }
+    }
+}
+.twitter{
+    background-color: rgb(0, 184, 216);
+    &:hover{
+        background-color: darken($color: rgb(0, 184, 216), $amount: 5%);
+    }
+}
+.thumbsup,.share{
+    background-color: rgb(35, 82, 223);
+    &:hover{
+        background-color: darken($color: rgb(35, 82, 223), $amount: 5%);
+    }
+}
+
+
+//-------------------------------内容----------------------------------
+
+#page-header{
+    background-color: white;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    .wrapper-1170{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+    main{
+        display: flex;
+    }
+    img{
+        height: 45px;
+    }
+    h5{
+        padding-top: 20px;
+    }
+    .button{
+        padding: 12px 35px;
+    }
+}
+
+#container-0{
+    height: 80px;
+}
+
+#container-1{
+    background-image: url(../img/main.jpg);
+    main{
+        text-align: center;
+        padding: 90px 0;
+        h1{
+            margin-bottom: 17px;
+        }
+        img{
+            margin: 0 auto;
+            height: 100px;
+        }
+        h3{
+            margin-top: 40px;
+            line-height: 1.2rem;
+        }
+    }
+}
+
+#container-2{
+    background-color: $orange-isara;
+    color: white;
+    h3{
+        letter-spacing: 0.2rem;
+    }
+    span{
+        color: $red-isara;
+        font-weight: normal;
+        background-color: white;
+    }
+    .button{
+        padding: 30px;
+        margin: 40px auto;
+        width: 80%;
+    }
+    footer{
+        h3{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+#container-3{
+    background-image: url(../img/introbottom.jpg);
+    //background-image: url(../img/main.jpg);
+    
+    h3{
+        font-weight: normal;
+        margin-bottom: 30px;
+        span{
+            border-bottom: 10px solid $orange-isara;
+            font-weight: 600;
+        }
+    }
+    h1{
+        margin-bottom: 40px;
+    }
+    .wrapper-860{
+        padding-bottom: 140px;
+    }
+}
+
+#container-4{
+    position: relative;
+    .circle-title{
+        position: absolute;
+        left: 50%;
+        top: -7%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+    }
+
+    background-color: $lightpink-isara;
+    padding-bottom: 70px;
+    .wrapper-860{
+        padding-top: 80px;
+    }
+    .wrapper-1170{
+        padding: 30px 0;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        max-width: 70%;
+        margin: 0 auto;
+        padding-top: 30px;
+        img{
+            margin: 0 auto;
+        }
+        p{
+            font-size: 0.85rem;
+        }
+    }
+}
+
+#container-5{
+    background-image: url(../img/aboutsecondbg.jpg);
+    color: white;
+    h3{
+        letter-spacing: 0.12rem;
+        span{
+            color: $orange-isara;
+        }
+    }
+    ul{
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 18px;
+        li{
+            background-color: white;
+            border-radius: 3px;
+            height: 160px;
+            h4,h5{
+                color: black;
+            }
+            h5{
+                margin-bottom: 15px;
+            }
+            .mini-title{
+                background-color: $orange-isara;
+                color: white;
+                max-width: 80%;
+                border-radius: 3px;
+                margin: 25px auto 15px;
+            }
+        }
+    }
+    footer{
+        background-color: $blue-isara;
+        text-align: center;
+        padding: 35px 0;
+    }
+}
+
+#container-6{
+    h1{
+        padding: 10px 0 30px;
+    }
+    h3{
+        font-weight: normal;
+    }
+    ul{
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 35px;
+    }
+}
+#container-7{
+    background-color: $lightpink-isara;
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 26px;
+        li{
+            text-align: left;
+            h3{
+                color: $orange-isara;
+                margin: 10px 0;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .content-box{
+        padding: 40px 0;
+        margin: 35px 0;
+        h1{
+            color: $orange-isara;
+        }
+        h3{
+            margin: 10px 0;
+        }
+    }
+    footer{
+        padding-top: 0;
+        p{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+#container-8{
+    background-image: url(../img/teacherbg.jpg);
+    color: white;
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        li{
+            margin-top: 200px;
+            border: solid white 2px;
+            padding: 40px;
+            position: relative;
+            img{
+                border-radius: 50%;
+                position: absolute;
+                top: -57%;
+                left: 50%;
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+#container-9{
+    header{
+        background-color: $orange-isara;
+        color: white;
+        
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -7%;
+            left: 0;
+            width: 0px;
+            height: 0px;
+            margin: auto;
+            border-style: solid;
+            border-color: $orange-isara transparent transparent transparent;
+            border-width: 30px 24px 0 24px;
+        }
+        
+        .circle-title{
+            background-color: white;
+            margin: 0 auto;
+            p{
+                color: $orange-isara;;
+            }
+        }
+
+    }
+    li{
+        display: flex;
+        margin-top: 30px;
+        p{
+            margin: 20px;
+            text-align: left;
+            small{
+                text-decoration:underline; 
+            }
+        }
+        img{
+            max-width: 230px;
+            border: $orange-isara solid 2px;
+        }
+    }
+
+}
+
+#container-10{
+    background-image: url(../img/classbg.jpg);
+    color: white;
+    footer{
+        background-color: $blue-isara;
+    }
+}
