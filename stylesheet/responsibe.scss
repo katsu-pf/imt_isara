@@ -54,12 +54,12 @@ container-11
 860
 隠せるやつにする
 
-container-12
-とくになし　
 
-container-13,14
-とくになし
-サイズ変更くらい
+container-13
+1170
+縦に並べる
+860
+丸が左、文章が右に来る
 
 container-15
 1170
@@ -69,7 +69,17 @@ container-15
 
 */
 
+//----------------------PCサイズで表示しないid,クラス--------------------------
+#header-btn-2{
+    display: none;
+}
+
 @media(max-width:1170px){
+    .wrapper-1170,.wrapper-860{
+        max-width: 95%;
+    }
+
+
     #container-5 ul{
         grid-template-columns: 1fr;
         li{
@@ -107,6 +117,22 @@ container-15
             margin-right: 10px;
         }
     }
+    #container-13{
+        ul{
+            flex-direction: column;
+        }
+        .content-box{
+            position: relative;
+            h1{
+                position: absolute;
+                top: -5%;
+            }
+            li{
+                margin: 15px auto;
+            }
+        }
+    }
+
     #container-15 main{
         grid-template-columns: 1fr;
         img{
@@ -122,4 +148,30 @@ container-15
         }
     }
 
+}
+@media (max-width:860px){
+
+    #page-header{
+        main{
+            flex-direction: column;
+            h5{
+                order: 1;
+                padding-top: 0px;
+            }
+            img{
+                order: 2;
+                width: 80px;
+
+            }
+        }
+        #header-btn-1{
+            display: none;
+        }
+        #header-btn-2{
+            display: block;
+        }
+        .button{
+            border-radius: none;
+        }
+    }
 }

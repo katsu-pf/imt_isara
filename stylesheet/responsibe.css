@@ -55,12 +55,12 @@ container-11
 860
 隠せるやつにする
 
-container-12
-とくになし　
 
-container-13,14
-とくになし
-サイズ変更くらい
+container-13
+1170
+縦に並べる
+860
+丸が左、文章が右に来る
 
 container-15
 1170
@@ -69,7 +69,14 @@ container-15
 これ以降は無し
 
 */
+#header-btn-2 {
+  display: none;
+}
+
 @media (max-width: 1170px) {
+  .wrapper-1170, .wrapper-860 {
+    max-width: 95%;
+  }
   #container-5 ul {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -113,6 +120,22 @@ container-15
     margin-left: 10px;
     margin-right: 10px;
   }
+  #container-13 ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #container-13 .content-box {
+    position: relative;
+  }
+  #container-13 .content-box h1 {
+    position: absolute;
+    top: -5%;
+  }
+  #container-13 .content-box li {
+    margin: 15px auto;
+  }
   #container-15 main {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -125,6 +148,36 @@ container-15
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  #page-header main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #page-header main h5 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding-top: 0px;
+  }
+  #page-header main img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 80px;
+  }
+  #page-header #header-btn-1 {
+    display: none;
+  }
+  #page-header #header-btn-2 {
+    display: block;
+  }
+  #page-header .button {
+    border-radius: none;
   }
 }
 /*# sourceMappingURL=responsibe.css.map */
