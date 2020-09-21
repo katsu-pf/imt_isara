@@ -1,0 +1,125 @@
+/*
+page-header
+860
+左を編集
+資料請求ボタン：正方形に
+
+container-1
+無し
+
+container-2
+860
+一部改行
+
+container-3
+860
+一部改行
+
+container-4
+860
+一部改行
+画像、文字のサイズ変更
+
+container-5
+1170
+stepのやつを1列に(幅はデフォのまま)
+860
+幅を100%に
+
+container-6
+丸の画像にmax-widthをかける
+860
+サイズの変更
+
+container-7
+1170
+コンテンツを縦並びに
+860
+画像幅を100%
+
+container-8
+1170
+コンテンツを縦並びに
+860
+画像を小さく
+
+container-9
+画像はmax-widthに設定しておく
+
+container-10
+1170
+コンテンツをたてならび
+
+container-11
+860
+隠せるやつにする
+
+container-12
+とくになし　
+
+container-13,14
+とくになし
+サイズ変更くらい
+
+container-15
+1170
+写真を幅いっぱい
+
+これ以降は無し
+
+*/
+
+@media(max-width:1170px){
+    #container-5 ul{
+        grid-template-columns: 1fr;
+        li{
+            width: 50%;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+    #container-7 ul{
+        grid-template-columns: 1fr;
+        max-width: 860px;
+        margin: 0 auto;
+        img{
+            width: 300px;
+            margin: 0 auto;
+        }
+        li{
+            text-align: center;
+        }
+    }
+    #container-8 ul{
+        grid-template-columns: 1fr;
+        li{
+            position: relative;
+            img{
+                position: absolute;
+                top: -77%;
+            }
+        }
+    }
+    #container-10 main{
+        grid-template-columns: 1fr;
+        li{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    #container-15 main{
+        grid-template-columns: 1fr;
+        img{
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+    #container-16{
+        #first-name,#family-name,#email,#inquire,.button{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+}
