@@ -116,7 +116,7 @@ h1 {
   border-right: 6px solid white;
 }
 
-/*-------使い方の例--------
+/*-------使用例--------
 
     <h1 class="corner-orange">
         エンジニアとして本当の自由を手に入れるためには？
@@ -165,6 +165,7 @@ h1 {
   padding: 0 9px;
   border-radius: 3px;
   margin-bottom: 20px;
+  line-height: 1rem;
 }
 
 .button-wrapper li a {
@@ -335,9 +336,11 @@ h1 {
 
 #container-4 ul img {
   margin: 0 auto;
+  height: 55px;
 }
 
 #container-4 ul p {
+  margin-top: 10px;
   font-size: 0.85rem;
 }
 
@@ -539,7 +542,246 @@ h1 {
   color: white;
 }
 
+#container-10 main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+#container-10 li {
+  font-weight: bold;
+  border-bottom: 1px solid #ececec;
+  border-right: 3px solid #016ea9;
+  border-left: 3px solid #016ea9;
+  padding: 7px 0;
+  color: black;
+  background-color: white;
+}
+
+#container-10 .table-title {
+  font-size: 1.2rem;
+  background-color: #016ea9;
+  color: white;
+  padding: 10px 0;
+  border-top: 3px solid #016ea9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#container-10 .table-last {
+  border-bottom: 3px solid #016ea9;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 #container-10 footer {
   background-color: #016ea9;
+}
+
+#container-11 .content-box {
+  border: none;
+  background-color: #fef5e0;
+  padding: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 16.6% 83.3%;
+      grid-template-columns: 16.6% 83.3%;
+}
+
+#container-11 .content-box img {
+  margin: 0 auto;
+}
+
+#container-11 .content-box article {
+  text-align: left;
+}
+
+#container-11 .b-l {
+  max-width: 860px;
+  height: 30px;
+  margin: 0 auto;
+  border-left: #ebb94d solid 2px;
+}
+
+#container-11 .b-t-r {
+  max-width: 860px;
+  height: 30px;
+  margin: 0 auto;
+  border-top: #ebb94d solid 2px;
+  border-right: #ebb94d solid 2px;
+}
+
+#container-11 .b-r {
+  max-width: 860px;
+  height: 30px;
+  margin: 0 auto;
+  border-right: #ebb94d solid 2px;
+}
+
+#container-11 .b-t-l {
+  max-width: 860px;
+  height: 30px;
+  margin: 0 auto;
+  border-top: #ebb94d solid 2px;
+  border-left: #ebb94d solid 2px;
+}
+
+#container-12 {
+  background-image: url(../img/bangkokbg.jpg);
+  color: white;
+}
+
+#container-12 .wrapper-1170 {
+  text-align: left;
+}
+
+#container-12 h2 {
+  padding: 30px 0;
+}
+
+#container-12 h5 {
+  padding-bottom: 30px;
+}
+
+#container-12 h3 {
+  padding: 30px 0;
+}
+
+#container-13 {
+  background-color: #ebb94d;
+}
+
+#container-13 span {
+  color: white;
+}
+
+#container-13 .content-box {
+  border-color: white;
+  background-color: #ebb94d;
+  margin-top: 100px;
+  padding: 45px 80px;
+  position: relative;
+}
+
+#container-13 .content-box h1 {
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  background-color: #ebb94d;
+}
+
+#container-13 .content-box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container-13 .content-box ul li {
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  padding: 18px;
+}
+
+#container-13 .content-box ul li h2 {
+  color: #ebb94d;
+  font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+#container-14 {
+  background-image: url(../img/specialdetail.jpg);
+  color: white;
+}
+
+#container-14 .corner-white {
+  letter-spacing: 0.2rem;
+}
+
+#container-15 h5 {
+  font-weight: normal;
+}
+
+#container-15 main {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  gap: 30px;
+}
+
+#container-15 main aside {
+  text-align: left;
+}
+
+#container-16 {
+  background-color: #ebb94d;
+}
+
+#container-16 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#container-16 #family-name, #container-16 #first-name, #container-16 #email, #container-16 #inquire {
+  background-color: white;
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#container-16 #inquire {
+  height: 100px;
+}
+
+#container-16 .button {
+  margin-top: 45px;
+  padding: 13px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+}
+
+#container-17 .inq {
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+#container-17 .inq h2, #container-17 .inq h4 {
+  padding: 15px;
+}
+
+#container-17 .inq h2 {
+  border: 1.5px solid #ececec;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
+#page-footer {
+  background-color: #ececec;
+}
+
+#page-footer h6 {
+  font-weight: normal;
+}
+
+#page-footer .button-wrapper {
+  margin: 15px 0;
 }
 /*# sourceMappingURL=style.css.map */
