@@ -29,7 +29,9 @@ h1{
 //--------------------------wrapperの設定----------------------------
 @mixin wrapper($width-size){
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 4%;
+    //40pxはセクションにおける上の余白 4%はスマートフォン向けの横の余白
+
     max-width: $width-size;
     text-align: center;
 }
