@@ -323,20 +323,20 @@ h1 {
 }
 
 #container-4 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /*gridの自動調整を適用*/
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 30px;
   max-width: 70%;
   margin: 0 auto;
   padding-top: 30px;
 }
 
 #container-4 ul img {
+  height: 50px;
   margin: 0 auto;
-  height: 55px;
 }
 
 #container-4 ul p {
