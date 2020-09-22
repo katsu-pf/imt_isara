@@ -152,9 +152,6 @@ container-15
 }
 
 @media (max-width: 860px) {
-  body {
-    font-family: "ヒラギノ角ゴ ProN" , sans-serif;
-  }
   #page-header main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

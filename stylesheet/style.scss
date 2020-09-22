@@ -11,6 +11,7 @@ body{
     box-sizing: border-box;
     line-height: 1.7;
     color: #432;
+    font-family: Verdana;
 }
 a{
     text-decoration: none;	
@@ -29,8 +30,10 @@ h1{
 //--------------------------wrapperの設定----------------------------
 @mixin wrapper($width-size){
     margin: 0 auto;
-    padding: 40px 4%;
-    //40pxはセクションにおける上の余白 4%はスマートフォン向けの横の余白
+    padding: 40px 0;
+
+    //padding: 40px 4%;
+    //40pxはセクションにおける上の余白 4%はスマートフォン向けの横の余白だが、現時点では型崩れする
 
     max-width: $width-size;
     text-align: center;
